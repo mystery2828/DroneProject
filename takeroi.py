@@ -2,8 +2,8 @@ import cv2
 from mtcnn import MTCNN
 from os import listdir
 
-for file in listdir('D:\\Tensorflow_working\\data\\record\\akash'):
-    filename = 'D:\\Tensorflow_working\\data\\record\\akash\\'+file
+for file in listdir('D:\\DroneProject\\data\\record\\ashwin'):
+    filename = 'D:\\DroneProject\\data\\record\\ashwin\\'+file
     detector = MTCNN()
 
     image = cv2.cvtColor(cv2.imread(filename), cv2.COLOR_BGR2RGB)
@@ -21,7 +21,7 @@ for file in listdir('D:\\Tensorflow_working\\data\\record\\akash'):
                           thickness= 4)
             roi = image[bounding_box[1]:bounding_box[1] + bounding_box[3],
                   bounding_box[0]:bounding_box[0] + bounding_box[2]]
-            cv2.imwrite('D:\\Tensorflow_working\\data\\train\\akash\\'+file, roi)
+            cv2.imwrite('D:\\DroneProject\\data\\train\\ashwin\\'+file, roi)
 
 # cv2.circle(image,(keypoints['left_eye']), 2, (0,155,255), 2)
 # cv2.circle(image,(keypoints['right_eye']), 2, (0,155,255), 2)
