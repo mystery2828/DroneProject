@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Complete-Deep-Learning" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Hand-sign-recognition" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Kaggle-Competitions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/face_recognition" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/handcricket/Hand-sign-recognition" vcs="Git" />
   </component>
 </project>
