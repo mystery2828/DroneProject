@@ -27,14 +27,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Tensorflow working" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.takeroi">
-    <configuration name="part15" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.takeroi (1)">
+    <configuration name="recordface (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Tensorflow working" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -42,11 +43,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../image_pro" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../image_pro/part15.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recordface.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,6 +98,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="takeroi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Tensorflow working" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/takeroi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="takeroi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Tensorflow working" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,34 +140,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Tensorflow working" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.takeroi (1)" />
+        <item itemvalue="Python.recordface (1)" />
         <item itemvalue="Python.takeroi" />
         <item itemvalue="Python.recordface" />
         <item itemvalue="Python.referencefile" />
-        <item itemvalue="Python.train" />
-        <item itemvalue="Python.part15" />
       </list>
     </recent_temporary>
   </component>
@@ -183,22 +184,46 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="140" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1583431828979" />
-    <state width="1345" height="194" key="GridCell.Tab.0.bottom" timestamp="1583841363294">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1584038980147">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1345" height="194" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583841363294" />
-    <state width="1345" height="194" key="GridCell.Tab.0.center" timestamp="1583841363294">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584038980147" />
+    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1584038980147">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1345" height="194" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1583841363294" />
-    <state width="1345" height="194" key="GridCell.Tab.0.left" timestamp="1583841363294">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584038980147" />
+    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1584038980146">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1345" height="194" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1583841363294" />
-    <state width="1345" height="194" key="GridCell.Tab.0.right" timestamp="1583841363294">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584038980146" />
+    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1584038980147">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1345" height="194" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1583841363294" />
+    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584038980147" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1584038980148">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584038980148" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1584038980148">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584038980148" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1584038980147">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584038980147" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1584038980148">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584038980148" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1584036774794">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584036774794" />
     <state x="379" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1583818206271">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
