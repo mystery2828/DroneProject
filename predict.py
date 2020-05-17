@@ -1,9 +1,12 @@
 import operator
-import numpy as np
 import cv2
 from keras.models import model_from_json
 from mtcnn import MTCNN
-from keras.preprocessing.image import img_to_array
+
+names = {'akash': {'Name: ': 'Akash C',
+                   'USN: ': '1JS17EC008',
+                   'Class: ': '6th sem ECE',
+                   'Mob No.: ': '9686178945'}}
 
 json_file = open("model-bw.json", "r")
 model_json = json_file.read()
@@ -49,11 +52,12 @@ while True:
             result = loaded_model.predict(roi.reshape(1, 64, 64, 3))
             prediction = {'akash': result[0][0],
                           'ashwin': result[0][1],
-                          'pranav': result[0][2]}
-
+                          'pranav': result[0][2]
+                          }
             prediction = sorted(prediction.items(), key=operator.itemgetter(1), reverse=True)
             cv2.putText(image, prediction[0][0], (10, 120), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 255), 1)
-        
+            # print(names[prediction[0][0]])
+            sql = 'SELECT name Name,usn USN,class Class mob Mob_No from names WHERE name =' + str(prediction[0][0])
             cv2.imshow("Frame", image)
     if cv2.waitKey(40) == 27:
         break

@@ -6,7 +6,7 @@ while cap.isOpened():
     ret,frame  = cap.read()
     image = frame
     cv2.imshow('Frame', frame)
-    cv2.imwrite("data/record/pranav/pranav" + str(time.time()) + ".jpg", cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+    cv2.imwrite("data/record/akash/akash" + str(time.time()) + ".jpg", cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
     if cv2.waitKey(40) == 27:
         break
 

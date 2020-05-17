@@ -1,43 +1,37 @@
-from keras.models import Sequential
-from keras.layers import Convolution2D
-from keras.layers import MaxPooling2D
-from keras.layers import Flatten
+from keras.layers import Conv2D
 from keras.layers import Dense
-from keras.layers import Dropout, BatchNormalization
-import matplotlib.pyplot as plt
+from keras.layers import Flatten
+from keras.layers import MaxPool2D
+from keras.models import Sequential
 
-classifier = Sequential()
+model = Sequential()
+model.add(Conv2D(input_shape=(64, 64, 3), filters=64, kernel_size=(3, 3), padding="same", activation="relu"))
+model.add(Conv2D(filters=64, kernel_size=(3, 3), padding="same", activation="relu"))
+model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(Conv2D(filters=128, kernel_size=(3, 3), padding="same", activation="relu"))
+model.add(Conv2D(filters=128, kernel_size=(3, 3), padding="same", activation="relu"))
+model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(Conv2D(filters=256, kernel_size=(3, 3), padding="same", activation="relu"))
+model.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2)))
 
-'''Part 1'''
-
-# First convolution layer and pooling
-classifier.add(Convolution2D(16, (3, 3), input_shape=(64, 64, 3), activation='relu'))
-classifier.add(MaxPooling2D(pool_size=(2, 2)))
-classifier.add(Dropout(0.2))
-classifier.add(BatchNormalization())
-
-classifier.add(Convolution2D(32, (3, 3), activation='relu'))
-# Add a dropout layer to prevent the model from overfitting
-classifier.add(Dropout(0.2))
-# Add a batch normalization so that we get equal probabilities while dealing with the dataset
-classifier.add(BatchNormalization())
-
-classifier.add(Convolution2D(64, (3, 3), activation='relu'))
-# input_shape is going to be the pooled feature maps from the previous convolution layer
-classifier.add(MaxPooling2D(pool_size=(2, 2)))
-# Add a batch normalization so that we get equal probabilities while dealing with the dataset
-classifier.add(BatchNormalization())
-classifier.add(Flatten())
-
-# Add a fully connected layer
-classifier.add(Dense(units=3, activation='softmax'))
-
-# categorical_crossentropy for more than 2
-classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model.add(Flatten())
+# model.add(Dense(units=4096,activation="relu"))
+model.add(Dense(units=4096, activation="relu"))
+model.add(Dense(units=3, activation="softmax"))
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+print(model.summary())
 
 from keras.preprocessing.image import ImageDataGenerator
-
-
 
 train_datagen = ImageDataGenerator(
     rescale=1. / 255,
@@ -62,15 +56,15 @@ test_set = test_datagen.flow_from_directory('data/test',
                                             batch_size=10,
                                             color_mode='rgb',
                                             class_mode='categorical')
-classifier.fit_generator(
+model.fit_generator(
     training_set,
-    steps_per_epoch=336//30,  # No of images in training set
+    steps_per_epoch=376 // 30,  # No of images in training set
     epochs=10,
     validation_data=test_set,
-    validation_steps=90//10)  # No of images in test set
+    validation_steps=90 // 10)  # No of images in test set
 
 # Saving the model
-model_json = classifier.to_json()
+model_json = model.to_json()
 with open("model-bw.json", "w") as json_file:
     json_file.write(model_json)
-classifier.save_weights('model-bw.h5')
+model.save_weights('model-bw.h5')
